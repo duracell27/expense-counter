@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { InnerLayout } from '../../styles/layouts'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <DashboardStyled>
+        <InnerLayout>
+            
+        </InnerLayout>
+    </DashboardStyled>
   )
 }
 const DashboardStyled = styled.div``
