@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 import { plus } from "../../utils/icons";
 
 const ExpenseForm = () => {
-  const { addExpense, getExpenses } = useGlobalContext();
+  const { addExpense, getExpenses, error } = useGlobalContext();
   const [inputState, setInputState] = useState({
     title: "",
     amount: "",
@@ -35,6 +35,7 @@ const ExpenseForm = () => {
   };
   return (
     <FormStyled onSubmit={handleSubmit}>
+      {error&& <p className="error">{error}</p>}
       <div className="input-control">
         <input
           value={title}
@@ -75,7 +76,7 @@ const ExpenseForm = () => {
           <option value="" disabled>
             Виберіть варіант
           </option>
-          <option value="Їда">Їжа</option>
+          <option value="Їжа">Їжа</option>
         </select>
       </div>
       <div className="input-control">

@@ -27,7 +27,7 @@ const Incomes = () => {
           </div>
           <div className="incomes">
             {incomes.map((income) => {
-              const { _id, title, amount, date, category, description } =
+              const { _id, title, amount, date, category, description, type } =
                 income;
               return (
                 <IncomeItem
@@ -35,6 +35,7 @@ const Incomes = () => {
                   id={_id}
                   title={title}
                   date={date}
+                  type={type}
                   description={description}
                   amount={amount}
                   category={category}
